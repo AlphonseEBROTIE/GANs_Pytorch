@@ -6,9 +6,10 @@ import matplotlib.pyplot as plt
 # taken from the original paper https://github.com/jsyoon0823/TimeGAN/blob/master/utils.py
 
 
-def real_data_loading (delimiter,skiprows ,seq_length):
-
-    x = np.loadtxt('C:/Users/alpho/Downloads/GOOGLE_BIG.csv', delimiter,skiprows=skiprows)
+def dataset_loading (seq_length,lien,skip_row):
+    
+    lien=lien 
+    x = np.loadtxt(lien, delimiter=",",skiprows=skip_row)
     
     # Flip the data to make chronological data
     x = x[::-1]
